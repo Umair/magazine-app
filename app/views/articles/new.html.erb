@@ -1,0 +1,28 @@
+<h1>New Article</h1>
+
+<div class="container">
+  <div class="row">
+
+    <div class="column">
+      <%= form_for(@article) do |f| %>
+          <% @article.errors.full_messages.each do |msg| %>
+              <p><%= msg %></p>
+          <% end %>
+
+          <p>
+            <%= f.label :title %><br />
+            <%= f.text_field :title %>
+          </p>
+          <p>
+            <%= f.label :content %><br />
+            <%= f.text_area :content %>
+          </p>
+          <p>
+            <%= f.submit "Create" %>
+          </p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

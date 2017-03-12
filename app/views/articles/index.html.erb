@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h3>Articles</h3>
+    <%= link_to "New Article" , new_article_path %>
+    <div class="column">
+      <table class="table">
+        <tbody>
+        <tr>
+          <td>Title</td>
+          <td>Content</td>
+          <td>Owner</td>
+        </tr>
+        <% @articles.each do |article| %>
+            <tr>
+              <%= render article %>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
